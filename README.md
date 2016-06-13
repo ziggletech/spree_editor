@@ -14,33 +14,43 @@ If you have issues, please check their issues trackers first.
 
 ---
 
-## Installation
-
-1. Add the Spree Editor gem to your `Gemfile`:
+1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: 'master'
+  gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: 'X-X-stable'
   ```
 
-2. Run:
-  ```sh
-  $ bundle install
-  $ rails g spree_editor:install
+  The `branch` option is important: it must match the version of Spree you're using.
+  For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
+
+2. Install the gem using Bundler:
+  ```ruby
+  bundle install
   ```
 
-3. If using CKEditor, and would like to enable file uploads run the ckeditor generator:
+3. Copy & run migrations
+  ```ruby
+  bundle exec rails g spree_editor:install
+  ```
+
+4. If using CKEditor, and would like to enable file uploads run the ckeditor generator:
   ```sh
   $ rails g ckeditor:install --orm=active_record --backend=paperclip && rake db:migrate
   ```
 
-4. In order to secure your file uploads to only be accessed by admins you will also need to configure config/initializers/ckeditor.rb:
+5. In order to secure your file uploads to only be accessed by admins you will also need to configure config/initializers/ckeditor.rb:
   ```ruby
   config.authorize_with :cancan, Spree::Ability
   ```
 
-5. In order to precompile CKEditor's generated assets, you will need to add a line in config/initializers/assets.rb:
+6. In order to precompile CKEditor's generated assets, you will need to add a line in config/initializers/assets.rb:
   ```ruby
   Rails.application.config.assets.precompile += %w( ckeditor/*)
   ```
+
+7. Restart your server
+
+  If your server was running, restart it so that it can find the assets properly.
+
 ---
 
 ## Configuration
