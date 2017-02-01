@@ -15,6 +15,15 @@ If you have issues, please check their issues trackers first.
 ---
 
 1. Add this extension to your Gemfile with this line:
+
+  #### Spree >= 3.1
+
+  ```ruby
+  gem 'spree_editor', github: 'spree-contrib/spree_editor'
+  ```
+
+  #### Spree 3.0 and Spree 2.x
+
   ```ruby
   gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: 'X-X-stable'
   ```
