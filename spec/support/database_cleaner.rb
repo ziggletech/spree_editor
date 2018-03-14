@@ -20,6 +20,4 @@ RSpec.configure do |config|
   config.after do
     DatabaseCleaner.clean
   end
-
-  Capybara.javascript_driver = :poltergeist
 end
