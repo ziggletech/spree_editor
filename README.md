@@ -8,7 +8,7 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 - [CKEditor][1]
 - [TinyMCE][2]
 
-Please not that this extension is just a simple integration of some pretty complex gems: [`ckeditor`][9] and [`tinymce-rails`][10].
+Please note that this extension is just a simple integration of some pretty complex gems: [`ckeditor`][9] and [`tinymce-rails`][10].
 
 If you have issues, please check their issues trackers first.
 
