@@ -44,4 +44,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'mysql2'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'appraisal'
+  s.add_development_dependency 'puma'
 end
